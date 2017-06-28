@@ -1,0 +1,58 @@
+---
+title: "Reproduzierbares Forschungsdatenmanagement mit R"
+subtitle: "Vortrag im Rahmen des ZPID/DGPs Symposiums am 01.07.2017"
+author: "Samuel Merk"
+output: 
+  ioslides_presentation:
+    fig_caption: true
+    css: Style/my.css
+    incremental: no
+    logo: Img/logo.png
+    smaller: no
+    widescreen: yes
+bibliography: /Users/samuelmerk/Documents/library.bib
+csl: Bib/dgps.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())  ##
+```
+
+
+## Inhaltlicher Überblick
+
+
+1. Reproduzierbarkeit von Datenanalysen/Datenmanagement
+2. R-spezifische Werzeuge
+     * Code <i class="fa fa-file-code-o"></i>  
+     * Code <i class="fa fa-file-code-o"></i> + Daten <i class="fa fa-database"></i>
+     * Ausführbarer Code <i class="fa fa-cogs"></i> + verlinkte Daten <i class="fa fa-link"></i>
+     * Wissenschaftskommunikation <i class="fa fa-comments-o"></i>
+3. Gut in R integrierbare Werkzeuge
+     * Versionierung mit Git <i class="fa fa-code-fork"></i>
+     * Make-like files <i class="fa fa-wrench"></i>
+4. How to get there?
+
+
+
+<div class="centered" font-size=8pt><span style="color:#C57974"><font size="3pt"><p></p><p></p>
+<p>Die interaktiven Folien können unter http://bit.ly/2gQTbSj und deren Quellcode</p> <p>unter https://github.com/sammerk/vortrag-tue-w1 abgerufen werden</p></font></span>
+</div>
+
+
+## Das Reproduzierbarkeitsspektrum
+```{r, fig.cap = "Das Reproduzierbarkeitsspektrum. Abbildung aus @Peng2011", out.width = "100%"}
+knitr::include_graphics("Img/peng_spectrum.png")
+```
+
+## "Bewildering Technology Soup" @Lapp2015
+```{r, fig.cap = "Bewildering Technology Soup. Eigene Darstellung.", out.width = "80%", fig.align='center'}
+knitr::include_graphics("Img/technology_soup.png")
+```
+
+## Tools: Reproduzierbarkeit $\times$ Niedrigschwelligkeit
+
+## Literatur {.nullvierem}
+
+
