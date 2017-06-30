@@ -1,0 +1,114 @@
+\documentclass[border=20pt,tikz]{standalone}
+\usepackage{forest}
+
+\forestset{
+  direction switch/.style={
+    for tree={
+      if level=3{}{draw},
+      thick,
+      edge={thick},
+      if level=1{
+        child anchor=north,
+        edge path={
+          \noexpand\path [\forestoption{edge}] (!u.parent anchor) -- ++(0,-.5em) -| (.child anchor)\forestoption{edge label};
+        },
+        s sep+=.5em,
+        for descendants={
+          child anchor=west,
+          align=left,
+          edge path={
+            \noexpand\path [\forestoption{edge}] (!u.parent anchor) ++(1em,0) |- (.child anchor)\forestoption{edge label};
+          },
+          fit=band,
+        },
+        for tree={
+          parent anchor=south west,
+          anchor=mid west,
+          grow'=0,
+          font=\sffamily,
+          if n children=0{}{
+            delay={
+              prepend={[,phantom, calign with current]}
+            }
+          },
+          before computing xy={
+            l=2em
+          },
+        },
+        before drawing tree={
+          x/.wrap pgfmath arg={##1}{.6*x()},
+          for children={
+            x/.wrap pgfmath arg={##1+1em}{.6*x()},
+            for children={
+              x/.wrap pgfmath arg={##1+2em}{.6*x()},
+            }
+          }
+        }
+      }{
+        if level=0{
+          parent anchor=south,
+          anchor=south,
+        }{},
+      },
+    },
+  }
+}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{forest}
+  % forest preamble: determine layout and format of tree
+  direction switch
+  [Forschungsprojekt
+    [Daten und Datenmanagement
+      [README
+        [README.Rmd]
+        [README.html]
+        [README.pdf]
+      ]
+      [Rohdaten
+        [Rohdaten\_Eytracking.csv]
+        [Rohdaten\_Survey.csv]
+        [Rohdaten\_Test.csv]
+      ]
+      [Datenwrangling
+        [Datawrangling\_Eytracking.R]
+        [Datawrangling\_Survey.R]
+        [Datawrangling\_Test.R]
+      ]
+      [Skalenhandbuch
+        [Skalenhandbuch.Rmd]
+        [Skalenhandbuch.html]
+        [Skalenhandbuch.pdf]
+      ]
+      [Makefiles
+        [makefile]
+      ]
+    ]
+    [Analysen
+      [Analysen Paper 1
+        [Heatmap\_Eyetracking.R]
+        [Faktorenstruktur\_Survey.R]
+        [Skalierung\_Test.R]
+      ]
+      [Analysen Paper 2
+        [...]
+      ]
+    ]
+    [Advertising
+      [Paper 1
+        [Paper\_1.Rmd]
+        [Paper\_1.pdf]
+      ]
+      [Pr\"asentation 1
+        [Pr\"asentation\_1.Rmd]
+        [Pr\"asentation\_1.html]
+      ]
+      [Homepage
+        [Dashbord.Rmd]
+        [Shiny\_App.R]
+      ]
+    ]
+  ]
+\end{forest}
+\end{document}

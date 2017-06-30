@@ -1,0 +1,36 @@
+---
+title: "Code plus verlinkte Daten in RMarkdown"
+author: "Samuel Merk"
+date: "28 6 2017"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+## R Markdown als Auszeichnungssprache
+
+Dies ist ein Markdown Dokument. Markdown ist eine denkbar einfache Auszeichnungssprache. Sie erlaubt einfache Formatierungen wie *kursiven* und **fette Satz** oder ...  
+
+* Listen, $Formelsatz = \frac{a}{b^2}$
+* etc.
+
+Dabei bleibt der Code gut lesbar und kann via `pandoc` in HTML, PDF und MS Word gesetzt werden.
+
+### RMarkdown und Reproduzierbarkeit
+Für reproduzierbare Forschung eignet sich RMarkdown besonders, da es Code-Input via `knitr` ausführen und diesen gemeinsam mit dem korrespondierenden Output und den Erläuterungen zu einem reproduzierbaren Dokument verwebt. Der Code wird dabei entweder als zusammenhängender "Chunk" oder "inline" geschrieben.
+```{r Codechunk, message=FALSE, cache = T}
+library(readr)
+meine_daten <- read_delim("https://files.osf.io/v1/resources/xve3t/providers/osfstorage/595379f46c613b0233b2b352", delim = ";")
+
+## Stichprobenbeschreibung
+nrow(meine_daten)
+table(meine_daten$sex)
+```
+
+## Beispiel: Inline-Chunk
+Es wurden also | `r sum(meine_daten$sex==1)`| Jungen  
+-------------- | -------------------------- | ---------------------
+und            |`r sum(meine_daten$sex==2)` | Mädchen untersucht. 
+
+
