@@ -37,7 +37,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())  ##
 
 
 <div class="centered" font-size=8pt><span style="color:#C57974"><font size="3pt"><p></p><p></p>
-<p>Die interaktiven Folien können unter http://bit.ly/2gQTbSj und deren Quellcode</p> <p>unter https://github.com/sammerk/vortrag-tue-w1 abgerufen werden</p></font></span>
+<p>Die interaktiven Folien können unter http://bit.ly/ZPID_17_Merk und deren Quellcode</p> <p>unter https://github.com/sammerk/ZPID2017 abgerufen werden</p></font></span>
 </div>
 
 
@@ -45,11 +45,18 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())  ##
 ```{r, fig.cap = "Das Reproduzierbarkeitsspektrum. Abbildung aus @Peng2011", out.width = "100%", fig.align='center', echo=FALSE}
 knitr::include_graphics("Img/peng_spectrum.png")
 ```
+  
+  
+<div class="centered" font-size=8pt><span style="color:#C57974"><font size="3pt"><p> </p> <p> </p>
+<p>Die interaktiven Folien können unter http://bit.ly/ZPID_17_Merk und deren Quellcode</p> <p>unter https://github.com/sammerk/ZPID2017 abgerufen werden</p></font></span>
+</div>
 
 ## "Bewildering Technology Soup" [@Lapp2015]
 ```{r, fig.cap = "Bewildering Technology Soup (Lapp 2015). Eigene Darstellung.", out.width = "80%", fig.align='center', echo=FALSE}
 knitr::include_graphics("Img/technology_soup.png")
 ```
+
+
 
 ## Tools: Reproduzierbarkeit $\times$ Einstiegshürde
 ```{r, fig.cap = "Reproduzierbarkeit vs. Einstiegshürde Eigene Darstellung.", out.width = "100%", fig.align='center', echo=FALSE}
@@ -181,10 +188,9 @@ knitr::include_graphics("Img/big_picture.png")
           * Hausaufgaben als gerenderte RMarkdown-Files ausgeben und einsammeln.
           * Veranstaltungen (halb-)öffentlich und interaktiv dokumentieren.
      * Forschung
-          * "Never touch your rawdata & avoid human interaction"-Maxime motiviert die Verwendung von RMarkdown, knitr und pandoc enorm.
-          * Vorbildfunktion
+          * **"Never touch your rawdata & avoid human interaction"-Maxime** motiviert die Verwendung von RMarkdown, knitr und pandoc enorm.
           
-
+          
 ## Literatur {.nullvierem}
 
 

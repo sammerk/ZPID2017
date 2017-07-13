@@ -3,9 +3,9 @@ title: "Code plus verlinkte Daten in RMarkdown"
 author: "Samuel Merk"
 date: "28 6 2017"
 output:
-  html_document: default
-  pdf_document: default
   word_document: default
+  pdf_document: default
+  html_document: default
 ---
 
 ## R Markdown als Auszeichnungssprache

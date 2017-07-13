@@ -86,12 +86,12 @@
       ]
     ]
     [Analysen
-      [Analysen Paper 1
+      [Analysen I
         [Heatmap\_Eyetracking.R]
         [Faktorenstruktur\_Survey.R]
         [Skalierung\_Test.R]
       ]
-      [Analysen Paper 2
+      [Analysen II
         [...]
       ]
     ]
